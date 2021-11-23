@@ -207,14 +207,14 @@ namespace FormPegarMAC
         private void Form1_Load(object sender, EventArgs e)
         {
             // Get my PC IP address
-            richTextBox2.Text += "IP : " +  GetIPAddress() + "\n";
+            richTextBox2.Text += "IP :     " +  GetIPAddress() + "\n";
             // Get My PC MAC address
-            richTextBox2.Text += "IP : " + GetMacAddress() + "\n";
+            richTextBox2.Text += "MAC : " + GetMacAddress() + "\n";
             // Get all devices on network
             Dictionary<IPAddress, PhysicalAddress> all = GetAllDevicesOnLAN();
             foreach (KeyValuePair<IPAddress, PhysicalAddress> kvp in all)
             {
-                richTextBox1.Text += "IP : " + kvp.Key + "\n" + "MAC : " + kvp.Value + "\n";
+                richTextBox1.Text += "IP :     " + kvp.Key + "\n" + "MAC : " + kvp.Value + "\n";
                 richTextBox1.Text += "-------------------------------------------\n";
                 MACs.Add(kvp.Value.ToString());
             }
@@ -310,14 +310,14 @@ namespace FormPegarMAC
             richTextBox3.Text = "";
             richTextBox4.Text = "";
             // Get my PC IP address
-            richTextBox2.Text += "IP : " + GetIPAddress() + "\n";
+            richTextBox2.Text += "IP :     " + GetIPAddress() + "\n";
             // Get My PC MAC address
-            richTextBox2.Text += "IP : " + GetMacAddress() + "\n";
+            richTextBox2.Text += "MAC : " + GetMacAddress() + "\n";
             // Get all devices on network
             Dictionary<IPAddress, PhysicalAddress> all = GetAllDevicesOnLAN();
             foreach (KeyValuePair<IPAddress, PhysicalAddress> kvp in all)
             {
-                richTextBox1.Text += "IP : " + kvp.Key + "\n" + "MAC : " + kvp.Value + "\n";
+                richTextBox1.Text += "IP :     " + kvp.Key + "\n" + "MAC : " + kvp.Value + "\n";
                 richTextBox1.Text += "-------------------------------------------\n";
                 MACs.Add(kvp.Value.ToString());
             }
